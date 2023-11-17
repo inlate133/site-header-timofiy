@@ -11,7 +11,7 @@
     <title>Назва вашої сторінки</title>
 
     <!-- Підключення зовнішніх стилів -->
-    <link rel="stylesheet" href=>
+    <link rel="stylesheet" href="./styles.css">
 
 </head>
 
@@ -45,21 +45,20 @@
                     <!-- 6.Створіть Кнопку. Для Для цього потрібно написати тільки один тег. Задайте йому класс button header-button -->
                     <!-- 6.1 Стовірть посилання на на почту. (href="mailto:example@gmail.com"). В тегу напишіть Contact Us -->
 <header>
-    <div>
-        <img src="header__logo.svg" alt="logo">
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Abous us</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Pricing</a></li>
-                <li><a href="">Blog</a></li>
+    <div class="header-container container">
+        <img src="./img/header__logo.svg" alt="logo">
+        <nav class="header-nav">
+            <ul class="header-list">
+                <li class="header-link"><a href="header-item" class="header-link--">Home</a></li>
+                <li class="header-link"><a href="header-item" class="header-link--">Abous us</a></li>
+                <li class="header-link"><a href="header-item" class="header-link--">Service</a></li>
+                <li class="header-link"><a href="header-item" class="header-link--">Pricing</a></li>
+                <li class="header-link"><a href="header-item" class="header-link--">Blog</a></li>
             </ul>
+            <button class="button header-button"><a href="">Contact Us</a></button>
         </nav>
 
     </div>
-</header>
-
 </body>
 
-</html>
+</html
