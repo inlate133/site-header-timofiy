@@ -11,7 +11,7 @@
     <title>Назва вашої сторінки</title>
 
     <!-- Підключення зовнішніх стилів -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 
 </head>
 
@@ -44,21 +44,78 @@
 
                     <!-- 6.Створіть Кнопку. Для Для цього потрібно написати тільки один тег. Задайте йому класс button header-button -->
                     <!-- 6.1 Стовірть посилання на на почту. (href="mailto:example@gmail.com"). В тегу напишіть Contact Us -->
-<header>
-    <div class="header-container container">
-        <img src="./img/header__logo.svg" alt="logo">
+
+<header class="header">
+    <div>
+        <img src="img/header__logo.svg" alt="">
         <nav class="header-nav">
             <ul class="header-list">
-                <li class="header-link"><a href="header-item" class="header-link--">Home</a></li>
-                <li class="header-link"><a href="header-item" class="header-link--">Abous us</a></li>
-                <li class="header-link"><a href="header-item" class="header-link--">Service</a></li>
-                <li class="header-link"><a href="header-item" class="header-link--">Pricing</a></li>
-                <li class="header-link"><a href="header-item" class="header-link--">Blog</a></li>
+                <li class="header-item"><a class="header-link" href="">Home</a></li>
+                <li class="header-item"><a class="header-link" href="">Abous Us</a></li>
+                <li class="header-item"><a class="header-link" href="">Service</a></li>
+                <li class="header-item"><a class="header-link" href="">Pricing</a></li>
+                <li class="header-item"><a class="header-link" href="">Blog</a></li>
             </ul>
-            <button class="button header-button"><a href="">Contact Us</a></button>
+            <button class="header-button"> <a href="mailto:example@gmail.com">Contact Us</a></button>
+            
         </nav>
 
+            
     </div>
+</header>
+
+
+ <!-- 1. Основна частина сторінки починається тут. Задайте клас main -->
+
+        <!-- 2. Тут починається секція. Задайте клас start і container -->
+
+            <!-- 3. Створіть контейнер та задайте йому клас solution-container -->
+
+                <!-- 4. Ствоірть внутрішній контейнер для основної інформації. Задайте йому клас start-inner -->
+
+                    <!-- 4.1. Створіть заголовок першого рівня, головний заголовок сторінки. Задайте йому клас start-title -->
+
+                    <!-- 4.2 Створіть текст з описом, де ми розповідаємо про те, що ми робимо. Задайте йому клас start-article.
+                    Сам текс - We have over 15 year exprience in business consultting arena. We have
+                        over 15 year exprience in business consultting arena and artficial intelligence.-->
+                        >
+                        <!-- 5. Ствірть контейнер для кнопки, які дозволяють користувачеві виконувати різні дії. Задайте класс start-buttons -->
+    
+                            <!-- 5.1. Створіть кнопку. Задайте класс button та tart-button -->
+    
+                                <!-- 5.1.1 Створіть посилання в середині якого Join Us. -->
+    
+                            <!-- 5.2. Створіть кнопку. Задайте класс start-button-video -->
+    
+                                <!-- 5.2.1. Створіть іконку через тег img (start__button-video.svg). -->
+    
+                                <!-- 5.2.2. Створіть текст на кнопці Watch video  -->
+     
+                    <!-- 6. Створіть основне зображення, яке показує людину. (start__dude.png). Задайте клас start-img  -->
+
+<main class="main">
+    <section class="start container">
+        <div class="solution-container">
+            <div class="start-inner">
+                <hi class="start-title"></hi>
+                <p class="start-article"> We have over 15 year exprience in business consultting arena. We have
+                    over 15 year exprience in business consultting arena and artficial intelligence</p>
+                <div class="start-buttons">
+                    <button class="button tart-button">
+                        <a href="#">Join Us</a></button>
+                    <button>
+                        <img src="./assets/img/start__button-video.svg" alt="">
+                        <p>Watch Video</p>
+                    </button>
+                </div>
+                <img src="./assets/img/start__dude.png" alt="">
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
 </body>
 
-</html
+</html>
