@@ -1,43 +1,64 @@
-/* Створити селектор кнопки з округлими краями, задати фоновий градієнт */
-.button {
-    border-radius: 5px; /* Округліть кути кнопки на 5 пікселів */
-    background: var(
-      --Gradient,
-      linear-gradient(90deg, #2563eb 0.36%, #d946ef 201.02%)
-    ); /* Задайте фоновий градієнт для кнопки */
-    border: none; /* Видаліть межі кнопки */
-  }
-  
-  .button a {
-    text-decoration: none;
-    color: #f9fafb;
-    font-size: 14px;
-    font-weight: 500;
-    transition: 0.3s ease;
-  }
-  
-  .button a:hover {
-    color: #cacaca;
-  }
-  
-  /* Стилізувати фонове зображення та шрифт для сторінки */
-  body {
-    background: url(../img/global__bg.png); /* Задайте фонове зображення для сторінки */
-    background-repeat: no-repeat; /* Забороніть повторення фонового зображення */
-    background-size: cover; /* Задайте розмір фонового зображення на всю ширину та висоту екрана */
-    background-position: center center; /* Задайте положення фонового зображення по центру сторінки */
-    font-family: "DM Sans"; /* Задайте шрифт для всього тексту на сторінці */
-  }
-  
-  /* Стилізувати контейнер для розміщення елементів верхнього блоку */
-  .container {
-    /* Задайте ширину контейнера 1158 пікселів */
-    /* Задайте внутрішній відступ зліва 15 пікселів */
-    /* Задайте внутрішній відступ справа 15 пікселів */
-    /* Задайте автоматичні зовнішні відступи для вирівнювання контейнера по центру */
-    outline: 2px solid red; /* Обведення контейнера червоним кольором для виділення */
-  }
-  
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+body {
+  background: url(../img/global__bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.container {
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 2px solid red;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
   /* Стилізувати верхній блок сторінки */
   header {
    padding-top: 24px;
@@ -176,16 +197,16 @@
 }
 
 .service-items {
-  /* Використовуйте flex-контейнер для вирівнювання по центру */
-  /* Горизонтальне вирівнювання елементів в центрі */
-  /* Встановіть проміжок між елементами 30px не через margin ta padding */
+  display: flex;/* Використовуйте flex-контейнер для вирівнювання по центру */
+  justify-content: center;/* Горизонтальне вирівнювання елементів в центрі */
+  letter-spacing: 30px;/* Встановіть проміжок між елементами 30px не через margin ta padding */
 }
 
 .service-item {
-  /* Використовуйте flex-контейнер для вирівнювання по центру */
-  /* Розташовуйте дочірні елементи в стовпчик */
-  /* Вирівнюйте елементи по центру по вертикалі */
-  /* Вирівнюйте елементи по центру по горизонталі */
+  display: flex ;/* Використовуйте flex-контейнер для вирівнювання по центру */
+  flex-direction: column;/* Розташовуйте дочірні елементи в стовпчик */
+  justify-content: center;/* Вирівнюйте елементи по центру по вертикалі */
+  align-items: center;/* Вирівнюйте елементи по центру по горизонталі */
 
   /* Закруглення кутів 34px (border)*/
   border: 1px solid var(--Bg-2, rgba(255, 255, 255, 0.08));
@@ -197,36 +218,37 @@
 
   /* Shadow  */
   box-shadow: 0px 22px 18px 0px rgba(0, 0, 0, 0.05);
-  /* Внутрішній відступ 20px ta 40 px*/
+  padding: 20px 40px;/* Внутрішній відступ 20px ta 40 px*/
 }
 
 .service-item-icon {
-  /* Зовнішній відступ 18px */
+  margin: 18px;/* Зовнішній відступ 18px */
 }
 
 .service-item-title {
-  /* Зовнішній відступ 18px */
-  /* Встановіть колір тексту white */
-  /* Розмір шрифту 24px */
-  /* Товщина шрифту 500*/
-  /* Міжрядковий інтервал normal */
+  margin: 18px;/* Зовнішній відступ 18px */
+  color: white;/* Встановіть колір тексту white */
+  font-size: 24px;/* Розмір шрифту 24px */
+  font-weight: 500;/* Товщина шрифту 500*/
+  line-height: normal;/* Міжрядковий інтервал normal */
 }
 
 .service-item-article {
-  /* Зовнішній відступ снизу 24px */
-  /* Встановіть колір тексту white */
-  /* Розмір шрифту 16px */
-  /* Товщина шрифту 400*/
-  /* Міжрядковий інтервал 26px */
-  /* Вирівнюйте текст по лівому краю (text-align)*/
+  margin-bottom: 24px;/* Зовнішній відступ снизу 24px */
+  color: white;/* Встановіть колір тексту white */
+  font-size: 16px;/* Розмір шрифту 16px */
+  font-weight: 400;/* Товщина шрифту 400*/
+  line-height: 26px;/* Міжрядковий інтервал 26px */
+  text-align: left;/* Вирівнюйте текст по лівому краю (text-align)*/
 }
 
 .service-item-link {
-  /* Використовуйте flex-контейнер для вирівнювання по центру */
-  /* Відмініть оформлення підкреслення для посилання */
+ display: flex; /* Використовуйте flex-контейнер для вирівнювання по центру */
+ text-decoration: none;/* Відмініть оформлення підкреслення для посилання */
 }
 
 .service-item-link span {
   /* Встановіть колір тексту white */
-  /* Зовнішній відступ справа 8px */
+  color: white;
+  margin: 8px;/* Зовнішній відступ справа 8px */
 }
